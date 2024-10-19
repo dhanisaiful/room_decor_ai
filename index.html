@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B545CVBL8D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-B545CVBL8D');
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '491894550117050');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=491894550117050&ev=PageView&noscript=1" /></noscript>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #08345B;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .container img.icon {
+            display: block;
+            margin: 0 auto 20px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .stats img {
+            max-width: 80%;
+            height: auto;
+            display: block;
+        }
+
+        .reviews {
+            position: relative;
+            max-width: 320px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .review-card {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+        }
+
+        .review-card div {
+            min-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .review-card div p {
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .review-card .stars {
+            color: #FFD700;
+            font-size: 1.1em;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .buttons button {
+            padding: 10px;
+            border: none;
+            background-color: #fff;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            pointer-events: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .buttons button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .buttons {
+            position: static;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .buttons button {
+            margin: 0 10px;
+            /* Tambahkan margin agar ada jarak di antara tombol */
+        }
+
+        .indicator {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .indicator span {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .indicator .active {
+            background-color: #007bff;
+        }
+
+        .get-free-btn {
+            margin-top: 30px;
+            background-color: #ffbd03;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            .container h1 {
+                font-size: 1.5em;
+            }
+
+            .stats img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .review-card div {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Icon" class="icon">
+        <h1 style="color: white;">Room Decor AI Interior Design</h1>
+        <p style="color: white;">#1 Decor AI Interior Design</p>
+        <div class="stats">
+            <img src="review.png" alt="Rating and User Trust">
+        </div>
+
+        <div class="reviews">
+            <div class="review-card" id="review-card">
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>John Doe:</strong> "User-friendly and intuitive." - Even as a tech novice, I found this app incredibly easy to navigate. The interface is clean and straightforward.</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Jane Smith:</strong> "Endless inspiration." - I've spent hours exploring the different design styles. This app has reignited my passion for interior design.</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Emily Brown:</strong> "Great value for money." - Considering the quality of the designs and the time it saves, the premium subscription is well worth it.</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★</p>
+                    <p><strong>Sarah Miller:</strong> "Amazing app! Transformed my living room with just a few clicks. Highly recommend."</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Thomas Jones:</strong> "Love the simplicity of this app. Easy to use and provides great design ideas."</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Michael Johnson:</strong> "Great for budget-friendly home makeovers. Found some amazing deals on furniture."</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>David Lee:</strong> "So many options to choose from. Perfect for any style or budget."</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★</p>
+                    <p><strong>William Harris:</strong> "User-friendly interface and quick loading times. Love it!"</p>
+                </div>
+                <div>
+                    <p class="stars">★★★★★</p>
+                    <p><strong>Olivia Taylor:</strong> "Inspired me to try new things with my home decor. Thank you!"
+                    </p>
+                </div>
+                <div>
+                    <p class="stars">★★★★</p>
+                    <p><strong>Ashley Clark:</strong> "The AI is a game-changer. It's like having a personal interior designer."
+                    </p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button onclick="prev()">&#8592;</button>
+                <button onclick="next()">&#8594;</button>
+            </div>
+        </div>
+
+        <div class="indicator">
+            <span class="active" onclick="goTo(0)"></span>
+            <span onclick="goTo(1)"></span>
+            <span onclick="goTo(2)"></span>
+            <span onclick="goTo(3)"></span>
+            <span onclick="goTo(4)"></span>
+            <span onclick="goTo(5)"></span>
+            <span onclick="goTo(6)"></span>
+            <span onclick="goTo(7)"></span>
+            <span onclick="goTo(8)"></span>
+            <span onclick="goTo(9)"></span>
+        </div>
+
+        <a href="https://apps.apple.com/us/app/room-decor-ai-interior-design/id6736499847" class="get-free-btn">Get App For
+            Free</a>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        let nextClickCount = 0;
+        const reviews = document.querySelectorAll('.review-card div');
+        const indicators = document.querySelectorAll('.indicator span');
+        const maxClicksBeforeRedirect = 1;
+        const redirectUrl = "https://apps.apple.com/us/app/motivate-daily-quotes-widget/id6661019720";
+
+        function updateIndicators() {
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function next() {
+            if (nextClickCount >= maxClicksBeforeRedirect) {
+                window.location.href = redirectUrl;
+                return;
+            }
+            if (currentIndex < reviews.length - 1) {
+                currentIndex++;
+                updateView();
+                nextClickCount++;
+            }
+        }
+
+        function prev() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateView();
+                nextClickCount = Math.max(nextClickCount - 1, 0);  // Reset counter if user goes back
+            }
+        }
+
+        function goTo(index) {
+            if (index >= 0 && index < reviews.length) {
+                currentIndex = index;
+                updateView();
+                nextClickCount = 0;  // Reset counter if user jumps directly to a specific review
+            }
+        }
+
+        function updateView() {
+            const reviewCard = document.getElementById('review-card');
+            reviewCard.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateIndicators();
+        }
+    </script>
+
+</body>
+
+</html>
